@@ -65,7 +65,7 @@
   <main id="main">
     <article class="legal">
       <h1>Velora Privacy Policy</h1>
-      <p class="last-updated">Effective Date: 30 September 2026</p>
+      <p class="last-updated">Effective Date: 6 November 2026</p>
 
       <h2>1. Introduction</h2>
       <p>This Privacy Policy explains how Velora (the "Application"), developed and operated by Doğaç Oğuz ("Data Controller", "we", "us"), collects, uses, stores, and protects information. Velora is offered as a Freemium service and is provided "AS IS." By using the Application you agree to the practices described herein.</p>
@@ -92,9 +92,15 @@
             </tr>
             <tr>
                 <td>Health Data (Write)</td>
-                <td>Alcohol consumption, dietary water intake, body mass (weight)</td>
-                <td>Allow you to log data back into Apple Health</td>
+                <td>Alcohol consumption, dietary water intake, body mass (weight), workout effort you rate for a workout</td>
+                <td>Allow you to log data back into Apple Health, and keep your effort rating in Apple Health so Apple Fitness and other apps can show it</td>
                 <td>On-device via Apple Health</td>
+            </tr>
+            <tr>
+                <td>Workout Check-ins</td>
+                <td>Effort you rate (1 to 10), the reasons you pick for how a workout felt (for example tired, poor sleep, pain, sick) and an optional private note</td>
+                <td>Show your check-in on the workout and, with Velora Pro, let Velora Coach mention patterns in later workouts</td>
+                <td>On your device only. Velora never uploads it. Your own device backup, including iCloud Backup when it is on, contains it like other app data</td>
             </tr>
             <tr>
                 <td>Derived Health Cache</td>
@@ -148,7 +154,7 @@
       </div>
 
       <h2>3. On-Device AI Processing</h2>
-      <p>Velora uses Apple Intelligence (on-device Foundation Models) to write short texts in real time: workout insights, step coaching, goal coaching on the Profile and Home screens, and the Home greeting. The model receives figures from your Health data, such as a workout's duration, distance, average heart rate and effort, a comparison with your previous session, recent sleep, resting heart rate and heart rate variability, recent step totals, your current and suggested goals, and the distance to your target weight; the greeting receives no health data. Processing happens entirely on your device: <strong>no health data is transmitted to any external server</strong> for AI processing, and generated texts are cached only on your device. Goal recommendations themselves are computed by fixed rules from your step, water and workout history, age, biological sex and weight, also on your device. AI-generated insights are informational only and may be inaccurate, incomplete, or unexpected. We do not guarantee the accuracy of any AI-generated content.</p>
+      <p>Velora uses Apple Intelligence (on-device Foundation Models) to write short texts in real time: workout insights, step coaching, goal coaching on the Profile and Home screens, and the Home greeting. The model receives figures from your Health data, such as a workout's duration, distance, average heart rate and effort, a comparison with your previous session, recent sleep, resting heart rate and heart rate variability, recent step totals, your current and suggested goals, the distance to your target weight, and your check-in effort ratings and reasons, as counts and averages the app computes (never your note); the greeting receives no health data. Processing happens entirely on your device: <strong>no health data is transmitted to any external server</strong> for AI processing, and generated texts are cached only on your device. Goal recommendations themselves are computed by fixed rules from your step, water and workout history, age, biological sex and weight, also on your device. AI-generated insights are informational only and may be inaccurate, incomplete, or unexpected. We do not guarantee the accuracy of any AI-generated content.</p>
 
       <h2>4. Apple Health Integration</h2>
       <p>When you connect Velora with Apple Health:</p>
@@ -157,6 +163,7 @@
           <li>You can revoke access at any time through <strong>Settings → Privacy &amp; Security → Health</strong></li>
           <li>Health data is accessed for the sole purpose of delivering fitness insights within the app</li>
           <li>The app also writes alcohol consumption, water intake, and body weight records back to Apple Health when you log them</li>
+          <li>When you rate a workout's effort in a check-in, the app also tries to save that rating to Apple Health. This is best effort: if Apple Health does not accept it, the rating stays in Velora. An effort already rated in Apple Fitness is shown in Velora and is never overwritten</li>
           <li>Velora widgets read step data directly from Apple Health to show live counts; this happens on your device only</li>
           <li>We comply with Apple's HealthKit usage guidelines: <strong>HealthKit data is never used for advertising, never sold, and never shared with third parties</strong> except as required to provide the app's core functionality</li>
       </ul>
@@ -185,6 +192,7 @@
       <ul>
           <li><strong>Local-first:</strong> Health data, the derived health cache, profile photo, and preferences remain on your device</li>
           <li><strong>Encryption:</strong> Data is encrypted in transit (TLS) and at rest (iOS Data Protection)</li>
+          <li><strong>Workout check-ins:</strong> Workout check-ins stay on your device and are not part of Velora's iCloud backup feature. Apple's device backup (including iCloud Backup when you turn it on) copies app data, including check-ins</li>
           <li><strong>iCloud backup (Velora Pro, optional):</strong> Stored in your private iCloud database using Apple's encryption; we cannot read it. You can turn it off at any time in Settings</li>
           <li><strong>No custom backend:</strong> Velora does not operate its own servers. All server-side processing is handled by Google/Firebase infrastructure and, for purchases and the optional iCloud backup, by Apple</li>
           <li><strong>No sale:</strong> We never sell your personal information</li>
@@ -193,7 +201,7 @@
       <h2>9. Legal Basis for Processing (KVKK / GDPR)</h2>
       <p>If you are located in the European Economic Area (EEA), the United Kingdom, Switzerland, or Türkiye, our legal bases for processing are:</p>
       <ul>
-          <li><strong>Explicit Consent:</strong> for health data access (granted via iOS permission dialogs)</li>
+          <li><strong>Explicit Consent:</strong> for health data access (granted via iOS permission dialogs) and for the check-in reasons and notes you choose to enter in the app (you add them yourself, can edit them on the workout at any time, and a notice in the app says where they are kept)</li>
           <li><strong>Legitimate Interest:</strong> for crash logs and anonymized analytics needed to maintain and improve the app</li>
           <li><strong>Contract Performance:</strong> for core app functionality you request when using the service, and for the Velora Pro subscription you purchase</li>
       </ul>
@@ -211,11 +219,12 @@
           <li><strong>Lodge a Complaint:</strong> file a complaint with your local data protection authority</li>
       </ul>
       <p><strong>California Residents (CCPA/CPRA):</strong> You have the right to know, delete, and opt out of the sale of personal information. <strong>We do not sell your personal information.</strong></p>
-      <p>To exercise any of these rights, contact us at <strong>dnf.velora@gmail.com</strong>. You can also revoke Health permissions in iOS Settings, turn off iCloud backup in the app's Settings (which stops syncing), or delete the app to remove all on-device data. Data already backed up to iCloud can be removed from your iCloud settings.</p>
+      <p>To exercise any of these rights, contact us at <strong>dnf.velora@gmail.com</strong>. You can also revoke Health permissions in iOS Settings, turn off iCloud backup in the app's Settings (which stops syncing), or delete the app to remove all on-device data. You can edit a workout check-in on its workout at any time. Data already backed up to iCloud can be removed from your iCloud settings.</p>
 
       <h2>11. Data Retention</h2>
       <ul>
           <li><strong>On-device data:</strong> Retained until you delete the app or manually clear data</li>
+          <li><strong>Workout check-ins:</strong> Kept until you delete the workout from Apple Health (Velora then deletes its check-in) or delete the app. You can edit them on the workout at any time</li>
           <li><strong>iCloud backup data:</strong> Retained in your iCloud until you turn backup off and delete it, or delete the app's iCloud data from your iCloud settings</li>
           <li><strong>Analytics &amp; crash logs:</strong> Retained by Firebase for the minimum period needed for diagnostics, then automatically purged per Google's retention policies</li>
       </ul>
